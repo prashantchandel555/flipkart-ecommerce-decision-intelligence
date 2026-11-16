@@ -1,0 +1,3 @@
+data/records.csv -text
+outputs/*.txt text eol=lf
+outputs/*.csv text eol=lf

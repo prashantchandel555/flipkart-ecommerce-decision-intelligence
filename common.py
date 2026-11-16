@@ -17,7 +17,7 @@ def load_data():
 
 def write_results(path, values, integer_keys=()):
     integer_keys = set(integer_keys)
-    with path.open("w") as handle:
+    with path.open("w", newline="\n") as handle:
         for key, value in values.items():
             if isinstance(value, str):
                 rendered = value

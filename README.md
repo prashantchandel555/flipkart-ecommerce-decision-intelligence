@@ -2,20 +2,33 @@ Domain: E-commerce
 
 ## How to run
 
-From the repository root on macOS or Linux, use Python 3.13 (the pinned NumPy version also supports Python 3.10–3.12). If using one of those versions instead, replace `python3.13` in the first command with its executable name. Python 3.14 is not supported by the pinned NumPy version.
+Run the commands below from the repository root. Install Python 3.10–3.13 first: the pinned NumPy version does not support Python 3.14. The `pip install` command downloads the required dependency; subsequent steps run offline. No virtual-environment activation is needed.
+
+**macOS or Linux** (replace `python3.13` with your installed version, for example `python3.12`, if needed):
 
 ```bash
 python3.13 -m venv .venv
-source .venv/bin/activate
-python -m pip install -r requirements.txt
-python generate_data.py
-python part1.py
-python part2.py
-python part3.py
-python part4.py
+.venv/bin/python -m pip install -r requirements.txt
+.venv/bin/python generate_data.py
+.venv/bin/python part1.py
+.venv/bin/python part2.py
+.venv/bin/python part3.py
+.venv/bin/python part4.py
 ```
 
-The generator should print `800 10 170 c6f249ba693f1ebeed318d6d5e18de23`. All analysis is offline; the scripts write their results under `outputs/`.
+**Windows** (Command Prompt or PowerShell, with the Python launcher installed; replace `-3.13` with your installed version, for example `-3.12`, if needed):
+
+```text
+py -3.13 -m venv .venv
+.venv\Scripts\python.exe -m pip install -r requirements.txt
+.venv\Scripts\python.exe generate_data.py
+.venv\Scripts\python.exe part1.py
+.venv\Scripts\python.exe part2.py
+.venv\Scripts\python.exe part3.py
+.venv\Scripts\python.exe part4.py
+```
+
+The generator should print `800 10 170 c6f249ba693f1ebeed318d6d5e18de23`. The scripts write their results under `outputs/`.
 
 ## Part 1 findings
 
