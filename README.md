@@ -59,7 +59,7 @@ The generator should print `800 10 170 c6f249ba693f1ebeed318d6d5e18de23`. All an
   | Dense1 (32 units) | 1×1×32 | 12,832 |
   | Dense2 (10 classes) | 1×1×10 | 330 |
 
-  For Model B, `W_xh` is 64×128, `W_hh` is 128×128 and `W_hy` is 128×16; the biases have 128 and 16 parameters, respectively, and the total is `rnn_total = 26768`. The RNN reuses the same weights at each time step, so the parameter count does not grow with sequence length. For the image classifier I would use ReLU in hidden layers and softmax with categorical cross-entropy for the ten mutually exclusive classes. A very deep plain network can suffer vanishing gradients, leaving early layers with almost no learning signal; skip connections provide a direct path for information and gradients across layers.
+  For Model B, `W_xh` is 128×64, `W_hh` is 128×128 and `W_hy` is 16×128; the biases have 128 and 16 parameters, respectively, and the total is `rnn_total = 26768`. The RNN reuses the same weights at each time step, so the parameter count does not grow with sequence length. For the image classifier I would use ReLU in hidden layers and softmax with categorical cross-entropy for the ten mutually exclusive classes. A very deep plain network can suffer vanishing gradients, leaving early layers with almost no learning signal; skip connections provide a direct path for information and gradients across layers.
 
 ## Model-choice memo
 
