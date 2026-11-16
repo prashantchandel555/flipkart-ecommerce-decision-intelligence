@@ -2,10 +2,10 @@ Domain: E-commerce
 
 ## How to run
 
-From the repository root in a clean Python 3.10+ environment:
+From the repository root on macOS or Linux, use Python 3.13 (the pinned NumPy version also supports Python 3.10–3.12). If using one of those versions instead, replace `python3.13` in the first command with its executable name. Python 3.14 is not supported by the pinned NumPy version.
 
 ```bash
-python -m venv .venv
+python3.13 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
 python generate_data.py
